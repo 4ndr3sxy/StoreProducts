@@ -69,6 +69,10 @@
       <DependentUpon>ProductModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="transaction.cs">
+      <DependentUpon>ProductModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="ProductModel.edmx">
@@ -89,6 +93,7 @@
       <LastGenOutput>ProductModel.Context.cs</LastGenOutput>
       <DependentUpon>ProductModel.edmx</DependentUpon>
     </Content>
+    <Content Include="ProductModel.edmx.sql" />
     <Content Include="ProductModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProductModel.edmx</DependentUpon>
