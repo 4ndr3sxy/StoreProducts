@@ -6,12 +6,19 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Data.Entity;
+using StoreProducts.Models;
 
 namespace StoreProducts.Controllers
 {
     public class ProductController : ApiController
     {
         private db_store_productEntities dbContext = new db_store_productEntities();
+        ModelFactory _mf;
+
+        public ProductController()
+        {
+            _mf = new ModelFactory();
+        }
 
         [HttpGet]
         public IEnumerable<product> Get()
@@ -20,6 +27,8 @@ namespace StoreProducts.Controllers
             {
                 return productsentities.products.ToList();
             }
+
+            Repository r = new Repository()
         }
 
         [HttpPost]

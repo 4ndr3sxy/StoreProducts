@@ -69,6 +69,7 @@
       <DependentUpon>ProductModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="transaction.cs">
       <DependentUpon>ProductModel.tt</DependentUpon>
     </Compile>
