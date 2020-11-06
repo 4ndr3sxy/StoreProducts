@@ -14,10 +14,19 @@ namespace ConectDB
     
     public partial class product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public product()
+        {
+            this.transactions = new HashSet<transaction>();
+        }
+    
         public int code { get; set; }
         public string name { get; set; }
         public string status { get; set; }
         public bool defective { get; set; }
         public int stock { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<transaction> transactions { get; set; }
     }
 }
