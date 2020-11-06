@@ -26,6 +26,12 @@ namespace StoreProducts.Controllers
             Repository r = new Repository();
             return r.getProducts().ToList().Select(x => _mf.CreateP(x));
         }
+        [HttpGet]
+        public IEnumerable<ProductModel> Get(int code)
+        {
+            Repository r = new Repository();
+            return r.getProduct(code).ToList().Select(x => _mf.CreateP(x));
+        }
 
         [HttpPost]
         public IHttpActionResult AddProduct([FromBody]product pdt)

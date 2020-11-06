@@ -13,13 +13,12 @@ namespace ConectDB
             db_store_productEntities ctx = new db_store_productEntities();
             return ctx.products;
         }
-        /*
-        public IQueryable<product> getUser(String id)
+        public IQueryable<product> getProduct(int code)
         {
-            db_blue_bankEntities ctx = new db_blue_bankEntities();
-            return ctx.users.Where(x => x.id == id).Select(x => x);
+            db_store_productEntities ctx = new db_store_productEntities();
+            return ctx.products.Where(x => x.code == code).Select(x => x);
         }
-        */
+
         public IQueryable<transaction> getTransactions(int id)
         {
             db_store_productEntities ctx = new db_store_productEntities();

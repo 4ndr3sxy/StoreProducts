@@ -27,7 +27,8 @@ namespace StoreProducts.Models
             {
                 Id = trn.id,
                 Fk_code_product = trn.fk_code_product,
-                Amount = trn.amount
+                Amount = trn.amount,
+                TypeT = trn.typeT
             };
         }
     }
