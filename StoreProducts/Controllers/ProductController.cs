@@ -21,14 +21,10 @@ namespace StoreProducts.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<product> Get()
+        public IEnumerable<ProductModel> Get()
         {
-            using (db_store_productEntities productsentities = new db_store_productEntities())
-            {
-                return productsentities.products.ToList();
-            }
-
-            Repository r = new Repository()
+            Repository r = new Repository();
+            return r.getProducts().ToList().Select(x => _mf.CreateP(x));
         }
 
         [HttpPost]

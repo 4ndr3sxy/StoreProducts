@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConectDB
 {
-    class Repository
+    public class Repository
     {
         public IQueryable<product> getProducts()
         {
