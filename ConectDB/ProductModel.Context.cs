@@ -26,5 +26,6 @@ namespace ConectDB
         }
     
         public virtual DbSet<product> products { get; set; }
+        public virtual DbSet<transaction> transactions { get; set; }
     }
 }
