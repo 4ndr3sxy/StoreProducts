@@ -93,6 +93,7 @@
       <LastGenOutput>ProductModel.Context.cs</LastGenOutput>
       <DependentUpon>ProductModel.edmx</DependentUpon>
     </Content>
+    <Content Include="ProductModel.edmx.sql" />
     <Content Include="ProductModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProductModel.edmx</DependentUpon>

@@ -17,6 +17,7 @@ namespace ConectDB
         public int id { get; set; }
         public int fk_code_product { get; set; }
         public int amount { get; set; }
+        public string typeT { get; set; }
     
         public virtual product product { get; set; }
     }
